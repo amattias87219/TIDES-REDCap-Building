@@ -1,0 +1,29 @@
+data rc_t1.Q2_import_test; set rc_t1.Q2_import;
+if study_id=	7163	then t2_q53a=-99;
+if study_id=	8148	then t2_q53a=-99;
+if study_id=	8180	then t2_q53a=-99;
+if study_id=	8217	then t2_q53a=-99;
+if study_id=	8225	then t2_q53a=-99;
+if study_id=	8256	then t2_q53a=-99;
+if study_id=	9113	then t2_q53a=-99;
+if study_id=	9207	then t2_q53a=-99;
+run;
+
+proc freq data=rc_t1.Q2_import_test;
+tables t2_q53 t2_q53a t2_q53a; 
+run;
+
+data rc_t1.Q2_import_test; set rc_t1.Q2_import_test;
+if t2_q53 = . then t2_q53a=-77;
+if t2_q53 = . then t2_q53b=-77;
+run;
+
+
+data rc_t1.Q2_import_test; set rc_t1.Q2_import_test;
+if t2_q53 = 0 then t2_q53a=-77;
+if t2_q53 = 0 then t2_q53b=-77;
+run;
+
+data rc_t1.Q2_import_test; set rc_t1.Q2_import_test;
+if t2_q53 = . then t2_q53=-99;
+run;
