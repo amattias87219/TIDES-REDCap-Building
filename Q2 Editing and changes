@@ -18,7 +18,6 @@ if t2_q53 = . then t2_q53a=-77;
 if t2_q53 = . then t2_q53b=-77;
 run;
 
-
 data rc_t1.Q2_import_test; set rc_t1.Q2_import_test;
 if t2_q53 = 0 then t2_q53a=-77;
 if t2_q53 = 0 then t2_q53b=-77;
