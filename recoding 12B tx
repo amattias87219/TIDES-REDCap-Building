@@ -97,4 +97,15 @@ if T2_Q12B_9_TX_Flag_three=1 then T2_Q12B_9_TX_other=-77;
 run;
 
 proc freq data=work.Q2_22119_forimport;
-table T2_Q12B_9_TX_other; run;
+table T2_Q12B_10_TX_other; run;
+
+data work.Q2_22119_forimport; set work.Q2_22119_forimport;
+if T2_Q12B_10_TX_Flag_three=1 then T2_Q12B_10_TX_NO=-77;
+if T2_Q12B_10_TX_Flag_three=1 then T2_Q12B_10_TX_INSEM=-77;
+if T2_Q12B_10_TX_Flag_three=1 then T2_Q12B_10_TX_OVINDUCT=-77;
+if T2_Q12B_10_TX_Flag_three=1 then T2_Q12B_10_tx_EGGDONATION=-77;
+if T2_Q12B_10_TX_Flag_three=1 then T2_Q12B_10_TX_other=-77;
+run;
+
+proc freq data=work.Q2_22119_forimport;
+table T2_Q12B_10_TX_other; run;
