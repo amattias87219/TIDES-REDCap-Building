@@ -146,6 +146,23 @@ Have ready to present to Shanna
 /********************************************************************************
 	MACRO #4: Check # of reported pregnancies (Q12A) with 
 	existing data from the subsequent questions -- TBD
+
+If you can start on this, here's how i'd approach it (which may not be the best way):
+	-I would create a flag for anyone who has any type of data for the T2_Q12B_1_xxx 
+	 variables, T2_Q12B_2_xxx variables, etc. using if/then in combination with or.
+	-If the flag was correct, create a new variable with the sum of these flags. You may
+	 have to recode missings to zero.
+	-Theoretically, the sum of the flags should equal the number of reported pregnancies
+	 in Q12A. 
+	-WARNING: I think there is some weirdness going on with T2_Q12B_1_BEGIN_MO and T2_Q12B_1_BEGIN_YR,
+	 I think there was a bad recode down the line and most are actually "7." I think even 
+	 prior to this, you may want to consider creating a dummy variable similar to how
+	 you did with the treatment variables at first. So if T2_Q12B_1_BEGIN_MO=7 AND T2_Q12B_1_BEGIN_YR=0
+	 then T2_Q12B_1_BEGIN_combo=.; else T2_Q12B_1_BEGIN_combo=1. Use the combo to create the flag from 
+	 the beginning.
+	 -SECOND WARNING: I think you'll still have the 12b_1_outcome=0 issue here, so either ignore for now or 
+	  temporarily anticipate what their outcome value might be based on faux macro #3. Either way, it's
+	  coding practice for you.
 ************************************************************************************/
 
 
