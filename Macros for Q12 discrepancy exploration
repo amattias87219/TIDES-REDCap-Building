@@ -1,6 +1,6 @@
 libname dwnld "__________" ; run;
 
-data work.Q2_22119_forimport; set dwnld.Q2_22119; run;
+data work.Q2_22119_forimport; set dwnld.Q2_22119_rn; run;
 
 /************************************************************
 	MACRO #1: Identifying people who did not 
