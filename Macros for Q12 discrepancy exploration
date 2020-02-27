@@ -1,3 +1,7 @@
+libname dwnld "__________" ; run;
+
+data work.Q2_22119_forimport; set dwnld.Q2_22119; run;
+
 /************************************************************
 	MACRO #1: Identifying people who did not 
 	specify a tx from a previous pregnancy
