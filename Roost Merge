@@ -16,9 +16,20 @@ data roost_sas;
 set roost.roost_prenatal_abstraction;
 run;
 
+/*Keep non-duplicate variables*/
+data roost_sas_limited; set <old>;
+keep study_id <icd9/icd10>; run;
+
+/*Non duplicate observations*/
+
+/*Proc sort*/
+proc sort data=<clean>; by study_id; run;
+proc sort data=<sas_limited>;
+
 /**Merge**/
 data roost_combo;
-set roost.roost_prenatal_abstraction;
+set roost.roost_prenatal_abstraction <second dataset>;
+by study_id;
 run;
 
 /**Order according to RedCap**/
@@ -39,3 +50,6 @@ data roost_icd;
 set roost_combo;
 keep ;
 run;
+
+data roost_icd; set ;
+_complete=2; run;
