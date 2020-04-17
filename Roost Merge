@@ -1,0 +1,41 @@
+/**Import ROOST_clean**/
+proc import out=work.roost_clean datafile="/folders/myfolders/roost-clean.csv" 
+dbms=csv;
+getnames=yes;
+run;
+
+data roost_clean_new;
+set work.roost_clean;
+run;
+
+/**Create new ROOST_sas dataset**/
+libname roost "/folders/myfolders";
+run;
+
+data roost_sas;
+set roost.roost_prenatal_abstraction;
+run;
+
+/**Merge**/
+data roost_combo;
+set roost.roost_prenatal_abstraction;
+run;
+
+/**Order according to RedCap**/
+data roost_combo_order;
+retain; 
+set roost_combo;
+run;
+
+
+/**Gestational Age Database**/
+data roost_ga;
+set roost_combo;
+keep ;
+run;
+
+/**icd9 and icd10 w/dates Database**/
+data roost_icd;
+set roost_combo;
+keep ;
+run;
