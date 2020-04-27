@@ -11,6 +11,10 @@ RENAME T1_Q6A1_A_YN =  T1_Allergy_YN_1;
 RENAME T1_Q6A1_A_SCRIPT =  T1_Allergy_SCRIPT_1;				
 RENAME T1_Q6A1_A_OTC =  T1_Allergy_OTC_1; run;	
 
+data ; set;
+label t1_allergy_yn_1="Q6A: Allergy YN"; run;
+
+
 data ;
 set ;
 RENAME T1_Q6A1_A_YN =  T1_Q6A1_Allergy_YN;				
