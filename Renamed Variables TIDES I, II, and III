@@ -3,7 +3,13 @@
 libname tides1 "/folders/myfolders";
 run;
 
-/*Question 6 Medications*/
+/*Question 6 Medications*/ 
+
+data ;
+set ;
+RENAME T1_Q6A1_A_YN =  T1_Allergy_YN_1;				
+RENAME T1_Q6A1_A_SCRIPT =  T1_Allergy_SCRIPT_1;				
+RENAME T1_Q6A1_A_OTC =  T1_Allergy_OTC_1; run;	
 
 data ;
 set ;
