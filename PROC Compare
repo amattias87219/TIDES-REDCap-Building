@@ -1,0 +1,1354 @@
+libname compare "/folders/myfolders";
+run;
+
+proc import out=compare.master datafile="/folders/myfolders/Master Age 4 previsit.csv" 
+dbms=csv;
+getnames=yes;
+run;
+
+proc import out=compare.mom_previsit datafile="/folders/myfolders/Age 4_momprevisit.xlsx" 
+dbms=xlsx;
+getnames=yes;
+run;
+
+/**Rename Datasets**/
+data master_q; set compare.master; run; 
+data mother_q; set compare.mom_previsit; run;
+
+/**Pre-Visit Questionnaire**/
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 3: Comparing Values for Variable Date';
+ID study_id;
+VAR v1_qdate;
+WITH tii_4_date;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 4: Comparing Values for Variable Name';
+ID study_id;
+VAR qcname;
+WITH tii_4_child_name;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 5: Comparing Values for Variable DOB';
+ID study_id;
+VAR qcdob;
+WITH tii_4_child_dob;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 6: Comparing Values for Variable Child Overall Health';
+ID study_id;
+VAR qc1;
+WITH tii_4_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 7: Comparing Values for Variable Reg Childcare Y/N';
+ID study_id;
+VAR qc2;
+WITH tii_4_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 8: Comparing Values for Variable Reg Childcare Hrs';
+ID study_id;
+VAR qc2a;
+WITH tii_4_2a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 9: Comparing Values for Variable # of Children';
+ID study_id;
+VAR qc3;
+WITH tii_4_dem_3_otherchild;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 10: Comparing Values for Variable Age of TIDES Child';
+ID study_id;
+VAR qc3a_yr;
+WITH tii_4_dem_3a_yr;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 11: Comparing Values for Variable And/Or';
+ID study_id;
+VAR qc3a_mo;
+WITH tii_4_dem_3a_mo;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 12: Comparing Values for Variable Sex of TIDES Child';
+ID study_id;
+VAR qc3a_sex;
+WITH tii_4_dem_3a_sex;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 13: Comparing Values for Variable Age of Child 2';
+ID study_id;
+VAR qc3b_yr;
+WITH tii_4_dem_3b_yr;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 14: Comparing Values for Variable And/Or';
+ID study_id;
+VAR qc3b_mo;
+WITH tii_4_dem_3b_mo;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 15: Comparing Values for Variable Sex of Child 2';
+ID study_id;
+VAR qc3b_sex;
+WITH tii_4_dem_3b_sex;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 16: Comparing Values for Variable Age of Child 3';
+ID study_id;
+VAR qc3c_yr;
+WITH tii_4_dem_3c_yr;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 17: Comparing Values for Variable And/Or';
+ID study_id;
+VAR qc3c_mo;
+WITH tii_4_dem_3c_mo;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 18: Comparing Values for Variable Sex of Child 3';
+ID study_id;
+VAR qc3c_sex;
+WITH tii_4_dem_3c_sex;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 19: Comparing Values for Variable Age of Child 4';
+ID study_id;
+VAR qc3d_yr;
+WITH tii_4_dem_3d_yr;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 20: Comparing Values for Variable And/Or';
+ID study_id;
+VAR qc3d_mo;
+WITH tii_4_dem_3d_mo;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 21: Comparing Values for Variable Sex of Child 4';
+ID study_id;
+VAR qc3d_sex;
+WITH tii_4_dem_3d_sex;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 22: Comparing Values for Variable Age of Child 5';
+ID study_id;
+VAR qc3e_yr;
+WITH tii_4_dem_3e_yr;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 23: Comparing Values for Variable And/Or';
+ID study_id;
+VAR qc3e_mo;
+WITH tii_4_dem_3e_mo;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 24: Comparing Values for Variable Sex of Child 5';
+ID study_id;
+VAR qc3e_sex;
+WITH tii_4_dem_3e_sex;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 25: Comparing Values for Variable # of Adults';
+ID study_id;
+VAR qc4;
+WITH tii_4_dem_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 26: Comparing Values for Variable Your Age';
+ID study_id;
+VAR qc4a1;
+WITH tii_4_dem_4a1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 27: Comparing Values for Variable Age of Adult 2';
+ID study_id;
+VAR qc4b1;
+WITH tii_4_dem_4b1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 28: Comparing Values for Variable Sex of Adult 2';
+ID study_id;
+VAR qc4b2;
+WITH tii_4_dem_4b2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 29: Comparing Values for Variable Relationship of Adult 2 to TIDES child';
+ID study_id;
+VAR qc4b3;
+WITH tii_4_dem_4b3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 30: Comparing Values for Variable Specify Others';
+ID study_id;
+VAR qc4b3_other;
+WITH tii_4_dem_4b3_other;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 31: Comparing Values for Variable Age of Adult 3';
+ID study_id;
+VAR qc4c1;
+WITH tii_4_dem_4c1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 32: Comparing Values for Variable Sex of Adult 3';
+ID study_id;
+VAR qc4c2;
+WITH tii_4_dem_4c2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 33: Comparing Values for Variable Relationship of Adult 3 to TIDES child';
+ID study_id;
+VAR qc4c3;
+WITH tii_4_dem_4c3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 34: Comparing Values for Variable Specify Others';
+ID study_id;
+VAR qc4c3_other;
+WITH tii_4_dem_4c3_other;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 35: Comparing Values for Variable Age of Adult 4';
+ID study_id;
+VAR qc4d1;
+WITH tii_4_dem_4d1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 36: Comparing Values for Variable Sex of Adult 4';
+ID study_id;
+VAR qc4d2;
+WITH tii_4_dem_4d2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 37: Comparing Values for Variable Relationship of Adult 4 to TIDES child';
+ID study_id;
+VAR qc4d3;
+WITH tii_4_dem_4d3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 38: Comparing Values for Variable Specify Others';
+ID study_id;
+VAR qc4d3_other;
+WITH tii_4_dem_4d3_other;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 39: Comparing Values for Variable';
+ID study_id;
+VAR qc5a1;
+WITH tii_4_dem_5a1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 40: Comparing Values for Variable';
+ID study_id;
+VAR qc5b1;
+WITH tii_4_dem_5b1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 41: Comparing Values for Variable';
+ID study_id;
+VAR qc5c1;
+WITH tii_4_dem_5c1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 42: Comparing Values for Variable';
+ID study_id;
+VAR qc5d1;
+WITH tii_4_dem_5d1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 43: Comparing Values for Variable';
+ID study_id;
+VAR qc5e1;
+WITH tii_4_dem_5e1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 44: Comparing Values for Variable';
+ID study_id;
+VAR qc5a2;
+WITH tii_4_smoke_5a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 45: Comparing Values for Variable';
+ID study_id;
+VAR qc5b2;
+WITH tii_4_smoke_5b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 46: Comparing Values for Variable';
+ID study_id;
+VAR qc5c2;
+WITH tii_4_smoke_5c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 47: Comparing Values for Variable';
+ID study_id;
+VAR qc5d2;
+WITH tii_4_smoke_5d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 48: Comparing Values for Variable';
+ID study_id;
+VAR qc5e2;
+WITH tii_4_smoke_5e;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 49: Comparing Values for Variable';
+ID study_id;
+VAR qc6;
+WITH tii_4_pmh_yn;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 50: Comparing Values for Variable';
+ID study_id;
+VAR qc6y;
+WITH tii_4_pmh;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 51: Comparing Values for Variable';
+ID study_id;
+VAR qc6y1a;
+WITH tii_4_pmh_1a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 52: Comparing Values for Variable';
+ID study_id;
+VAR qc6y1b;
+WITH tii_4_pmh_1b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 53: Comparing Values for Variable';
+ID study_id;
+VAR qc6y2a;
+WITH tii_4_pmh_2a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 54: Comparing Values for Variable';
+ID study_id;
+VAR qc6y2b;
+WITH tii_4_pmh_2b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 55: Comparing Values for Variable';
+ID study_id;
+VAR qc6y3a;
+WITH tii_4_pmh_3a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 56: Comparing Values for Variable';
+ID study_id;
+VAR qc6y3b;
+WITH tii_4_pmh_3b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 57: Comparing Values for Variable';
+ID study_id;
+VAR qc6y4a;
+WITH tii_4_pmh_4a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 58: Comparing Values for Variable';
+ID study_id;
+VAR qc6y4b;
+WITH tii_4_pmh_4b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 59: Comparing Values for Variable';
+ID study_id;
+VAR qc6y5a;
+WITH tii_4_pmh_5a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 60: Comparing Values for Variable';
+ID study_id;
+VAR qc6y5b;
+WITH tii_4_pmh_5b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 61: Comparing Values for Variable';
+ID study_id;
+VAR qc7;
+WITH tii_4_isaac_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 62: Comparing Values for Variable';
+ID study_id;
+VAR qc7a;
+WITH tii_4_isaac_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 63: Comparing Values for Variable';
+ID study_id;
+VAR qc7b;
+WITH tii_4_isaac_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 64: Comparing Values for Variable';
+ID study_id;
+VAR qc7c;
+WITH tii_4_isaac_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 65: Comparing Values for Variable';
+ID study_id;
+VAR qc7d;
+WITH tii_4_isaac_5;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 66: Comparing Values for Variable';
+ID study_id;
+VAR qc8;
+WITH tii_4_isaac_6;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 67: Comparing Values for Variable';
+ID study_id;
+VAR qc9;
+WITH tii_4_isaac_7;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 68: Comparing Values for Variable';
+ID study_id;
+VAR qc10;
+WITH tii_4_isaac_8;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 69: Comparing Values for Variable';
+ID study_id;
+VAR qc11;
+WITH tii_4_isaac_9;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 70: Comparing Values for Variable';
+ID study_id;
+VAR qc12;
+WITH tii_4_isaac_10;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 71: Comparing Values for Variable';
+ID study_id;
+VAR qc13;
+WITH tii_4_isaac_11;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 72: Comparing Values for Variable';
+ID study_id;
+VAR qc13a;
+WITH tii_4_isaac_12;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 73: Comparing Values for Variable';
+ID study_id;
+VAR qc13b;
+WITH tii_4_isaac_13;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 74: Comparing Values for Variable';
+ID study_id;
+VAR qc13c;
+WITH tii_4_isaac_14;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 75: Comparing Values for Variable';
+ID study_id;
+VAR qc13d;
+WITH tii_4_isaac_15;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 76: Comparing Values for Variable';
+ID study_id;
+VAR qc13e;
+WITH tii_4_isaac_16;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 77: Comparing Values for Variable';
+ID study_id;
+VAR qc14;
+WITH tii_4_isaac_17;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 78: Comparing Values for Variable';
+ID study_id;
+VAR qc15;
+WITH tii_4_isaac_18;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 79: Comparing Values for Variable';
+ID study_id;
+VAR qc16;
+WITH tii_4_isaac_19;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 80: Comparing Values for Variable';
+ID study_id;
+VAR qc17;
+WITH tii_4_isaac_20;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 81: Comparing Values for Variable';
+ID study_id;
+VAR qs1a;
+WITH tii_4_sleep_1a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 82: Comparing Values for Variable';
+ID study_id;
+VAR qs1b;
+WITH tii_4_sleep_1b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 83: Comparing Values for Variable';
+ID study_id;
+VAR qs2;
+WITH tii_4_sleep_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 84: Comparing Values for Variable';
+ID study_id;
+VAR qs3;
+WITH tii_4_sleep_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 85: Comparing Values for Variable';
+ID study_id;
+VAR qs4a;
+WITH tii_4_sleep_4a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 86: Comparing Values for Variable';
+ID study_id;
+VAR qs4b;
+WITH tii_4_sleep_4b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 87: Comparing Values for Variable';
+ID study_id;
+VAR qs4c;
+WITH tii_4_sleep_4c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 88: Comparing Values for Variable';
+ID study_id;
+VAR qs4d;
+WITH tii_4_sleep_4d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 89: Comparing Values for Variable';
+ID study_id;
+VAR qs4e;
+WITH tii_4_sleep_4e;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 90: Comparing Values for Variable';
+ID study_id;
+VAR qs4f;
+WITH tii_4_sleep_4f;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 91: Comparing Values for Variable';
+ID study_id;
+VAR p1a;
+WITH tii_4_psai_1a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 92: Comparing Values for Variable';
+ID study_id;
+VAR p1b;
+WITH tii_4_psai_1b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 93: Comparing Values for Variable';
+ID study_id;
+VAR p1c;
+WITH tii_4_psai_1c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 94: Comparing Values for Variable';
+ID study_id;
+VAR p1d;
+WITH tii_4_psai_1d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 95: Comparing Values for Variable';
+ID study_id;
+VAR p1e;
+WITH tii_4_psai_1e;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 96: Comparing Values for Variable';
+ID study_id;
+VAR p1f;
+WITH tii_4_psai_1f;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 97: Comparing Values for Variable';
+ID study_id;
+VAR p1g;
+WITH tii_4_psai_1g;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 98: Comparing Values for Variable';
+ID study_id;
+VAR p2a;
+WITH tii_4_psai_2a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 99: Comparing Values for Variable';
+ID study_id;
+VAR p2b;
+WITH tii_4_psai_2b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 100: Comparing Values for Variable';
+ID study_id;
+VAR p2c;
+WITH tii_4_psai_2c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 101: Comparing Values for Variable';
+ID study_id;
+VAR p2d;
+WITH tii_4_psai_2d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 102: Comparing Values for Variable';
+ID study_id;
+VAR p2e;
+WITH tii_4_psai_2e;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 103: Comparing Values for Variable';
+ID study_id;
+VAR p2f;
+WITH tii_4_psai_2f;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 104: Comparing Values for Variable';
+ID study_id;
+VAR p2g;
+WITH tii_4_psai_2g;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 105: Comparing Values for Variable';
+ID study_id;
+VAR p2h;
+WITH tii_4_psai_2h;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 106: Comparing Values for Variable';
+ID study_id;
+VAR p2i;
+WITH tii_4_psai_2i;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 107: Comparing Values for Variable';
+ID study_id;
+VAR p2j;
+WITH tii_4_psai_2j;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 108: Comparing Values for Variable';
+ID study_id;
+VAR p2k;
+WITH tii_4_psai_2k;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 109: Comparing Values for Variable';
+ID study_id;
+VAR p3a;
+WITH tii_4_psai_3a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 110: Comparing Values for Variable';
+ID study_id;
+VAR p3b;
+WITH tii_4_psai_3b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 111: Comparing Values for Variable';
+ID study_id;
+VAR p3c;
+WITH tii_4_psai_3c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 112: Comparing Values for Variable';
+ID study_id;
+VAR p3d;
+WITH tii_4_psai_3d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 113: Comparing Values for Variable';
+ID study_id;
+VAR p3e;
+WITH tii_4_psai_3e;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 114: Comparing Values for Variable';
+ID study_id;
+VAR p3f;
+WITH tii_4_psai_3f;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 115: Comparing Values for Variable';
+ID study_id;
+VAR p4a;
+WITH tii_4_psai_4a;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 116: Comparing Values for Variable';
+ID study_id;
+VAR p4b;
+WITH tii_4_psai_4b;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 117: Comparing Values for Variable';
+ID study_id;
+VAR p4c;
+WITH tii_4_psai_4c;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 118: Comparing Values for Variable';
+ID study_id;
+VAR p4e;
+WITH tii_4_psai_4d;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 119: Comparing Values for Variable';
+ID study_id;
+VAR q1;
+WITH tii_4_mom_hlth;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 120: Comparing Values for Variable';
+ID study_id;
+VAR q2;
+WITH tii_4_mom_marital;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 121: Comparing Values for Variable';
+ID study_id;
+VAR q3edu;
+WITH tii_4_mom_edu;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 122: Comparing Values for Variable';
+ID study_id;
+VAR q4___0;
+WITH tii_4_mom_ins___0;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 123: Comparing Values for Variable';
+ID study_id;
+VAR q4___1;
+WITH tii_4_mom_ins___1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 124: Comparing Values for Variable';
+ID study_id;
+VAR q4___2;
+WITH tii_4_mom_ins___2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 125: Comparing Values for Variable';
+ID study_id;
+VAR q5;
+WITH tii_4_mom_employ;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 126: Comparing Values for Variable';
+ID study_id;
+VAR q6a;
+WITH tii_4_sle_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 127: Comparing Values for Variable';
+ID study_id;
+VAR q6b;
+WITH tii_4_sle_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 128: Comparing Values for Variable';
+ID study_id;
+VAR q6c;
+WITH tii_4_sle_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 129: Comparing Values for Variable';
+ID study_id;
+VAR q6d;
+WITH tii_4_sle_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 130: Comparing Values for Variable';
+ID study_id;
+VAR q6e;
+WITH tii_4_sle_5;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 131: Comparing Values for Variable';
+ID study_id;
+VAR q6f;
+WITH tii_4_sle_6;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 132: Comparing Values for Variable';
+ID study_id;
+VAR q6g;
+WITH tii_4_sle_7;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 133: Comparing Values for Variable';
+ID study_id;
+VAR q6h;
+WITH tii_4_sle_8;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 134: Comparing Values for Variable';
+ID study_id;
+VAR q6i;
+WITH tii_4_sle_9;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 135: Comparing Values for Variable';
+ID study_id;
+VAR q6j;
+WITH tii_4_sle_10;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 136: Comparing Values for Variable';
+ID study_id;
+VAR q6k;
+WITH tii_4_sle_11;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 137: Comparing Values for Variable';
+ID study_id;
+VAR q6l;
+WITH tii_4_sle_12;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 138: Comparing Values for Variable';
+ID study_id;
+VAR q6m;
+WITH tii_4_sle_13;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 139: Comparing Values for Variable';
+ID study_id;
+VAR q6n;
+WITH tii_4_sle_14;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 140: Comparing Values for Variable';
+ID study_id;
+VAR q6o;
+WITH tii_4_sle_15;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 141: Comparing Values for Variable';
+ID study_id;
+VAR q6p;
+WITH tii_4_sle_16;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 142: Comparing Values for Variable';
+ID study_id;
+VAR q6q;
+WITH tii_4_sle_17;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 143: Comparing Values for Variable';
+ID study_id;
+VAR q6r;
+WITH tii_4_sle_18;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 144: Comparing Values for Variable';
+ID study_id;
+VAR q6s;
+WITH tii_4_sle_19;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 145: Comparing Values for Variable';
+ID study_id;
+VAR q6t;
+WITH tii_4_sle_20;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 146: Comparing Values for Variable';
+ID study_id;
+VAR q6u;
+WITH tii_4_sle_21;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 147: Comparing Values for Variable';
+ID study_id;
+VAR q6v;
+WITH tii_4_sle_22;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 148: Comparing Values for Variable';
+ID study_id;
+VAR q6w;
+WITH tii_4_sle_23;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 149: Comparing Values for Variable';
+ID study_id;
+VAR q6x;
+WITH tii_4_sle_24;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 150: Comparing Values for Variable';
+ID study_id;
+VAR q6y;
+WITH tii_4_sle_25;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 151: Comparing Values for Variable';
+ID study_id;
+VAR q6z;
+WITH tii_4_sle_26;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 152: Comparing Values for Variable';
+ID study_id;
+VAR q6oth;
+WITH tii_4_sle_other;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 153: Comparing Values for Variable';
+ID study_id;
+VAR q7a;
+WITH tii_4_cps_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 154: Comparing Values for Variable';
+ID study_id;
+VAR q7b;
+WITH tii_4_cps_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 155: Comparing Values for Variable';
+ID study_id;
+VAR q7c;
+WITH tii_4_cps_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 156: Comparing Values for Variable';
+ID study_id;
+VAR q7d;
+WITH tii_4_cps_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 157: Comparing Values for Variable';
+ID study_id;
+VAR q7e;
+WITH tii_4_cps_5;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 158: Comparing Values for Variable';
+ID study_id;
+VAR q7f;
+WITH tii_4_cps_6;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 159: Comparing Values for Variable';
+ID study_id;
+VAR q7g;
+WITH tii_4_cps_7;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 160: Comparing Values for Variable';
+ID study_id;
+VAR q7h;
+WITH tii_4_cps_8;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 161: Comparing Values for Variable';
+ID study_id;
+VAR q7i;
+WITH tii_4_cps_9;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 162: Comparing Values for Variable';
+ID study_id;
+VAR q7j;
+WITH tii_4_cps_10;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 163: Comparing Values for Variable';
+ID study_id;
+VAR q8a;
+WITH tii_4_phq9_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 164: Comparing Values for Variable';
+ID study_id;
+VAR q8b;
+WITH tii_4_phq9_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 165: Comparing Values for Variable';
+ID study_id;
+VAR q8c;
+WITH tii_4_phq9_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 166: Comparing Values for Variable';
+ID study_id;
+VAR q8d;
+WITH tii_4_phq9_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 167: Comparing Values for Variable';
+ID study_id;
+VAR q8e;
+WITH tii_4_phq9_5;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 168: Comparing Values for Variable';
+ID study_id;
+VAR q8f;
+WITH tii_4_phq9_6;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 169: Comparing Values for Variable';
+ID study_id;
+VAR q8g;
+WITH tii_4_phq9_7;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 170: Comparing Values for Variable';
+ID study_id;
+VAR q8h;
+WITH tii_4_phq9_8;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 171: Comparing Values for Variable';
+ID study_id;
+VAR q8i;
+WITH tii_4_phq9_9;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 172: Comparing Values for Variable';
+ID study_id;
+VAR q9a;
+WITH tii_4_ss_1;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 173: Comparing Values for Variable';
+ID study_id;
+VAR q9b;
+WITH tii_4_ss_2;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 174: Comparing Values for Variable';
+ID study_id;
+VAR q9c;
+WITH tii_4_ss_3;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 175: Comparing Values for Variable';
+ID study_id;
+VAR q9d;
+WITH tii_4_ss_4;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 176: Comparing Values for Variable';
+ID study_id;
+VAR q9e;
+WITH tii_4_ss_5;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 177: Comparing Values for Variable';
+ID study_id;
+VAR q9f;
+WITH tii_4_ss_6;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 178: Comparing Values for Variable';
+ID study_id;
+VAR q9g;
+WITH tii_4_ss_7;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 179: Comparing Values for Variable';
+ID study_id;
+VAR q9h;
+WITH tii_4_ss_8;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 180: Comparing Values for Variable';
+ID study_id;
+VAR q9i;
+WITH tii_4_ss_9;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 181: Comparing Values for Variable';
+ID study_id;
+VAR q9j;
+WITH tii_4_ss_10;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 182: Comparing Values for Variable';
+ID study_id;
+VAR q9k;
+WITH tii_4_ss_11;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 183: Comparing Values for Variable';
+ID study_id;
+VAR q9l;
+WITH tii_4_ss_12;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 184: Comparing Values for Variable';
+ID study_id;
+VAR q9m;
+WITH tii_4_ss_13;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 185: Comparing Values for Variable';
+ID study_id;
+VAR q9n;
+WITH tii_4_ss_14;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 186: Comparing Values for Variable';
+ID study_id;
+VAR q9o;
+WITH tii_4_ss_15;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 187: Comparing Values for Variable';
+ID study_id;
+VAR q9p;
+WITH tii_4_ss_16;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 188: Comparing Values for Variable';
+ID study_id;
+VAR q9q;
+WITH tii_4_ss_17;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 189: Comparing Values for Variable';
+ID study_id;
+VAR q9r;
+WITH tii_4_ss_18;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 190: Comparing Values for Variable';
+ID study_id;
+VAR q9s;
+WITH tii_4_ss_19;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 191: Comparing Values for Variable';
+ID study_id;
+VAR q9t;
+WITH tii_4_ss_20;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 192: Comparing Values for Variable';
+ID study_id;
+VAR q10;
+WITH tii_4_end;
+run;
+
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE 'Example 193: Comparing Values for Variable';
+ID study_id;
+VAR q11;
+WITH tii_4_end_2;
+run;
