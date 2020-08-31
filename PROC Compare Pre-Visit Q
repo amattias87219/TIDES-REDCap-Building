@@ -15,6 +15,19 @@ run;
 data master_q; set compare.master; run; 
 data mother_q; set compare.mom_previsit; run;
 
+%macro a(x,y,z);
+proc compare BASE=mother_q COMPARE=master_q;
+TITLE &x;
+ID study_id;
+VAR &y;
+WITH &z;
+run;
+%mend;
+
+%a("Example 3: Comparing Values for Variable Date", v1_qdate, tii_4_date);
+%a("Example 4: Comparing Values for Variable Name", qcname, tii_4_child_name);
+
+
 /**Pre-Visit Questionnaire**/
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 3: Comparing Values for Variable Date';
