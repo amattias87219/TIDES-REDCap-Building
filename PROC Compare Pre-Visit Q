@@ -26,372 +26,59 @@ run;
 
 %a("Example 3: Comparing Values for Variable Date", v1_qdate, tii_4_date);
 %a("Example 4: Comparing Values for Variable Name", qcname, tii_4_child_name);
-
+%a("Example 5: Comparing Values for Variable DOB", qcdob, tii_4_child_dob);
+%a("Example 6: Comparing Values for Variable Child Overall Health", qc1, tii_4_1);
+%a("Example 7: Comparing Values for Variable Reg Childcare Y/N", qc2, tii_4_2);
+%a("Example 8: Comparing Values for Variable Reg Childcare Hrs", qc2a, tii_4_2a);
+%a("Example 9: Comparing Values for Variable # of Children", qc3, tii_4_dem_3_otherchild);
+%a("Example 10:Comparing Values for Variable Age of TIDES Child", qc3a_yr, tii_4_dem_3a_yr);
+%a("Example 11:Comparing Values for Variable And/or", qc3a_mo, tii_4_dem_3a_mo);
+%a("Example 12:Comparing Values for Variable Sex of TIDES Child", qc3a_sex, tii_4_dem_3a_sex);
+%a("Example 13:Comparing Values for Variable Age of Child 2", qc3b_yr, tii_4_dem_3b_yr);
+%a("Example 14:Comparing Values for Variable And/Or", qc3b_mo, tii_4_dem_3b_mo);
+%a("Example 15:Comparing Values for Variable Sex of Child 2", qc3b_sex, tii_4_dem_3b_sex);
+%a("Example 16:Comparing Values for Variable Age of Child 3", qc3c_yr, tii_4_dem_3c_yr);
+%a("Example 17:Comparing Values for Variable And/Or", qc3c_mo, tii_4_dem_3c_mo);
+%a("Example 18:Comparing Values for Variable Sex of Child 3", qc3c_sex, tii_4_dem_3c_sex);
+%a("Example 19:Comparing Values for Variable Age of Child 4", qc3d_yr, tii_4_dem_3d_yr);
+%a("Example 20:Comparing Values for Variable And/Or", qc3d_mo, tii_4_dem_3d_mo);
+%a("Example 21:Comparing Values for Variable Sex of Child 4", qc3d_sex, tii_4_dem_3d_sex);
+%a("Example 22:Comparing Values for Variable Age of Child 5", qc3e_yr, tii_4_dem_3e_yr);
+%a("Example 23:Comparing Values for Variable And/Or", qc3e_mo, tii_4_dem_3e_mo);
+%a("Example 24:Comparing Values for Variable Sex of Child 5", qc3e_sex, tii_4_dem_3e_sex);
+%a("Example 25:Comparing Values for Variable # of Adults", qc4, tii_4_dem_4);
+%a("Example 26:Comparing Values for Variable Your Age", qc4a1, tii_4_dem_4a1);
+%a("Example 27:Comparing Values for Variable Age of Adult 2", qc4b1, tii_4_dem_4b1);
+%a("Example 28:Comparing Values for Variable Sex of Adult 2", qc4b2, tii_4_dem_4b2);
+%a("Example 29:Comparing Values for Variable Relationship of Adult 2 to TIDES child", qc4b3, tii_4_dem_4b3);
+%a("Example 30:Comparing Values for Variable Specify Others", qc4b3_other, tii_4_dem_4b3_other);
+%a("Example 31:Comparing Values for Variable Age of Adult 3", qc4c1, tii_4_dem_4c1);
+%a("Example 32:Comparing Values for Variable Sex of Adult 3", qc4c2, tii_4_dem_4c2);
+%a("Example 33:Comparing Values for Variable Relationship of Adult 3 to TIDES child", qc4c3, tii_4_dem_4c3);
+%a("Example 34:Comparing Values for Variable Specify Others", qc4c3_other, tii_4_dem_4c3_other);
+%a("Example 35:Comparing Values for Variable Age of Adult 4", qc4d1, tii_4_dem_4d1);
+%a("Example 36:Comparing Values for Variable Sex of Adult 4", qc4d2, tii_4_dem_4d2);
+%a("Example 37:Comparing Values for Variable Relationship of Adult 4 to TIDES child", qc4d3, tii_4_dem_4d3);
+%a("Example 38:Comparing Values for Variable Specify Others", qc4d3_other, tii_4_dem_4d3_other);
+%a("Example 39:Comparing Values for Variable You", qc5a1, tii_4_dem_5a1);
+%a("Example 40:Comparing Values for Variable Your Child's father", qc5b1, tii_4_dem_5b1);
+%a("Example 41:Comparing Values for Variable Another person living in your same house", qc5c1, tii_4_dem_5c1);
+%a("Example 42:Comparing Values for Variable Your child's child care provider", qc5d1, tii_4_dem_5d1);
+%a("Example 43:Comparing Values for Variable Other", qc5e1, tii_4_dem_5e1);
+%a("Example 44:Comparing Values for Variable You smoke hrs/week", qc5a2, tii_4_smoke_5a);
+%a("Example 45:Comparing Values for Variable Child's father smoke hrs/week", qc5b2, tii_4_smoke_5b);
+%a("Example 46:Comparing Values for Variable Other person smoke hrs/week", qc5c2, tii_4_smoke_5c);
+%a("Example 47:Comparing Values for Variable Care provider smoke hrs/week", qc5d2, tii_4_smoke_5d);
+%a("Example 48:Comparing Values for Variable Other person smoke hrs/week", qc5e2, tii_4_smoke_5e);
+%a("Example 49:Comparing Values for Variable Chronic or severe medical issues, Y/N", qc6, tii_4_pmh_yn);
+%a("Example 50:Comparing Values for Variable # of Chronic or severe medical issues in past 2 years", qc6y, tii_4_pmh);
+%a("Example 51:Comparing Values for Variable Name of Medical Problem 1", qc6y1a, tii_4_pmh_1a);
+%a("Example 52:Comparing Values for Variable Medication Prescribed for Medical Problem 1", qc6y1b, tii_4_pmh_1b);
+%a("Example 53:Comparing Values for Variable Name of Medical Problem 2", qc6y2a, tii_4_pmh_2a);
+%a("Example 54:Comparing Values for Variable Medication Prescribed for Medical Problem 2", qc6y2b, tii_4_pmh_2b);
 
 /**Pre-Visit Questionnaire**/
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 3: Comparing Values for Variable Date';
-ID study_id;
-VAR v1_qdate;
-WITH tii_4_date;
-run;
 
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 4: Comparing Values for Variable Name';
-ID study_id;
-VAR qcname;
-WITH tii_4_child_name;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 5: Comparing Values for Variable DOB';
-ID study_id;
-VAR qcdob;
-WITH tii_4_child_dob;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 6: Comparing Values for Variable Child Overall Health';
-ID study_id;
-VAR qc1;
-WITH tii_4_1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 7: Comparing Values for Variable Reg Childcare Y/N';
-ID study_id;
-VAR qc2;
-WITH tii_4_2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 8: Comparing Values for Variable Reg Childcare Hrs';
-ID study_id;
-VAR qc2a;
-WITH tii_4_2a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 9: Comparing Values for Variable # of Children';
-ID study_id;
-VAR qc3;
-WITH tii_4_dem_3_otherchild;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 10: Comparing Values for Variable Age of TIDES Child';
-ID study_id;
-VAR qc3a_yr;
-WITH tii_4_dem_3a_yr;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 11: Comparing Values for Variable And/Or';
-ID study_id;
-VAR qc3a_mo;
-WITH tii_4_dem_3a_mo;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 12: Comparing Values for Variable Sex of TIDES Child';
-ID study_id;
-VAR qc3a_sex;
-WITH tii_4_dem_3a_sex;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 13: Comparing Values for Variable Age of Child 2';
-ID study_id;
-VAR qc3b_yr;
-WITH tii_4_dem_3b_yr;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 14: Comparing Values for Variable And/Or';
-ID study_id;
-VAR qc3b_mo;
-WITH tii_4_dem_3b_mo;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 15: Comparing Values for Variable Sex of Child 2';
-ID study_id;
-VAR qc3b_sex;
-WITH tii_4_dem_3b_sex;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 16: Comparing Values for Variable Age of Child 3';
-ID study_id;
-VAR qc3c_yr;
-WITH tii_4_dem_3c_yr;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 17: Comparing Values for Variable And/Or';
-ID study_id;
-VAR qc3c_mo;
-WITH tii_4_dem_3c_mo;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 18: Comparing Values for Variable Sex of Child 3';
-ID study_id;
-VAR qc3c_sex;
-WITH tii_4_dem_3c_sex;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 19: Comparing Values for Variable Age of Child 4';
-ID study_id;
-VAR qc3d_yr;
-WITH tii_4_dem_3d_yr;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 20: Comparing Values for Variable And/Or';
-ID study_id;
-VAR qc3d_mo;
-WITH tii_4_dem_3d_mo;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 21: Comparing Values for Variable Sex of Child 4';
-ID study_id;
-VAR qc3d_sex;
-WITH tii_4_dem_3d_sex;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 22: Comparing Values for Variable Age of Child 5';
-ID study_id;
-VAR qc3e_yr;
-WITH tii_4_dem_3e_yr;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 23: Comparing Values for Variable And/Or';
-ID study_id;
-VAR qc3e_mo;
-WITH tii_4_dem_3e_mo;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 24: Comparing Values for Variable Sex of Child 5';
-ID study_id;
-VAR qc3e_sex;
-WITH tii_4_dem_3e_sex;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 25: Comparing Values for Variable # of Adults';
-ID study_id;
-VAR qc4;
-WITH tii_4_dem_4;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 26: Comparing Values for Variable Your Age';
-ID study_id;
-VAR qc4a1;
-WITH tii_4_dem_4a1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 27: Comparing Values for Variable Age of Adult 2';
-ID study_id;
-VAR qc4b1;
-WITH tii_4_dem_4b1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 28: Comparing Values for Variable Sex of Adult 2';
-ID study_id;
-VAR qc4b2;
-WITH tii_4_dem_4b2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 29: Comparing Values for Variable Relationship of Adult 2 to TIDES child';
-ID study_id;
-VAR qc4b3;
-WITH tii_4_dem_4b3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 30: Comparing Values for Variable Specify Others';
-ID study_id;
-VAR qc4b3_other;
-WITH tii_4_dem_4b3_other;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 31: Comparing Values for Variable Age of Adult 3';
-ID study_id;
-VAR qc4c1;
-WITH tii_4_dem_4c1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 32: Comparing Values for Variable Sex of Adult 3';
-ID study_id;
-VAR qc4c2;
-WITH tii_4_dem_4c2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 33: Comparing Values for Variable Relationship of Adult 3 to TIDES child';
-ID study_id;
-VAR qc4c3;
-WITH tii_4_dem_4c3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 34: Comparing Values for Variable Specify Others';
-ID study_id;
-VAR qc4c3_other;
-WITH tii_4_dem_4c3_other;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 35: Comparing Values for Variable Age of Adult 4';
-ID study_id;
-VAR qc4d1;
-WITH tii_4_dem_4d1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 36: Comparing Values for Variable Sex of Adult 4';
-ID study_id;
-VAR qc4d2;
-WITH tii_4_dem_4d2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 37: Comparing Values for Variable Relationship of Adult 4 to TIDES child';
-ID study_id;
-VAR qc4d3;
-WITH tii_4_dem_4d3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 38: Comparing Values for Variable Specify Others';
-ID study_id;
-VAR qc4d3_other;
-WITH tii_4_dem_4d3_other;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 39: Comparing Values for Variable';
-ID study_id;
-VAR qc5a1;
-WITH tii_4_dem_5a1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 40: Comparing Values for Variable';
-ID study_id;
-VAR qc5b1;
-WITH tii_4_dem_5b1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 41: Comparing Values for Variable';
-ID study_id;
-VAR qc5c1;
-WITH tii_4_dem_5c1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 42: Comparing Values for Variable';
-ID study_id;
-VAR qc5d1;
-WITH tii_4_dem_5d1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 43: Comparing Values for Variable';
-ID study_id;
-VAR qc5e1;
-WITH tii_4_dem_5e1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 44: Comparing Values for Variable';
-ID study_id;
-VAR qc5a2;
-WITH tii_4_smoke_5a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 45: Comparing Values for Variable';
-ID study_id;
-VAR qc5b2;
-WITH tii_4_smoke_5b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 46: Comparing Values for Variable';
-ID study_id;
-VAR qc5c2;
-WITH tii_4_smoke_5c;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 47: Comparing Values for Variable';
-ID study_id;
-VAR qc5d2;
-WITH tii_4_smoke_5d;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 48: Comparing Values for Variable';
-ID study_id;
-VAR qc5e2;
-WITH tii_4_smoke_5e;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 49: Comparing Values for Variable';
-ID study_id;
-VAR qc6;
-WITH tii_4_pmh_yn;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 50: Comparing Values for Variable';
-ID study_id;
-VAR qc6y;
-WITH tii_4_pmh;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 51: Comparing Values for Variable';
-ID study_id;
-VAR qc6y1a;
-WITH tii_4_pmh_1a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 52: Comparing Values for Variable';
-ID study_id;
-VAR qc6y1b;
-WITH tii_4_pmh_1b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 53: Comparing Values for Variable';
-ID study_id;
-VAR qc6y2a;
-WITH tii_4_pmh_2a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 54: Comparing Values for Variable';
-ID study_id;
-VAR qc6y2b;
-WITH tii_4_pmh_2b;
-run;
 
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 55: Comparing Values for Variable';
