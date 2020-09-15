@@ -178,43 +178,14 @@ run;
 %a("Example 152:Comparing Values for Variable How often felt unable to control important things", q7b, tii_4_cps_2;
 %a("Example 153:Comparing Values for Variable How often nervous or stressed", q7c, tii_4_cps_3;
 %a("Example 154:Comparing Values for Variable How often confident about ability to handle personal prob", q7d, tii_4_cps_4;
+%a("Example 155:Comparing Values for Variable How often feel things go your way", q7e, tii_4_cps_5;
+%a("Example 156:Comparing Values for Variable How often could not cope with all tasks", q7f, tii_4_cps_6;
+%a("Example 157:Comparing Values for Variable How often control irritations", q7g, tii_4_cps_7;
+%a("Example 158:Comparing Values for Variable How often feel on top of things", q7h, tii_4_cps_8;
+
 /**Pre-Visit Questionnaire**/
 
 
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 156: Comparing Values for Variable';
-ID study_id;
-VAR q7d;
-WITH tii_4_cps_4;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 157: Comparing Values for Variable';
-ID study_id;
-VAR q7e;
-WITH tii_4_cps_5;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 158: Comparing Values for Variable';
-ID study_id;
-VAR q7f;
-WITH tii_4_cps_6;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 159: Comparing Values for Variable';
-ID study_id;
-VAR q7g;
-WITH tii_4_cps_7;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 160: Comparing Values for Variable';
-ID study_id;
-VAR q7h;
-WITH tii_4_cps_8;
-run;
 
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 161: Comparing Values for Variable';
