@@ -200,112 +200,20 @@ run;
 %a("Example 174:Comparing Values for Variable If I feel lonely, there are people I can talk to", q9e, tii_4_ss_5);
 %a("Example 175:Comparing Values for Variable There is no one I feel comfortable to talking about intimate personal prob", q9f, tii_4_ss_6);
 %a("Example 176:Comparing Values for Variable I often meet or talk with family/friends", q9g, tii_4_ss_7);
-%a("Example 177:Comparing Values for Variable I often meet or talk with family/friends", q9g, tii_4_ss_7);
+%a("Example 177:Comparing Values for Variable Most people I know think highly of me", q9h, tii_4_ss_8);
+%a("Example 178:Comparing Values for Variable Hard time finding someone to take me to airport in morning", q9i, tii_4_ss_9);
+%a("Example 179:Comparing Values for Variable I feel like I am not always included by my circle of friends", q9j, tii_4_ss_10);
+%a("Example 180:Comparing Values for Variable No one with objective view of how I'm handling my problems", q9k, tii_4_ss_11);
+%a("Example 181:Comparing Values for Variable Several people I enjoy spending time with", q9l, tii_4_ss_12);
+%a("Example 182:Comparing Values for Variable I think that my friends feel that I'm not very good at helping them solve their problems.", q9m, tii_4_ss_13);
+%a("Example 183:Comparing Values for Variable I would have trouble finding someone to take me to doctor", q9n, tii_4_ss_14);
+%a("Example 184:Comparing Values for Variable I would have trouble finding someone to go on a day trip with me", q9o, tii_4_ss_15);
+%a("Example 185:Comparing Values for Variable I could easily find someone to put me up in case of an emergency", q9p, tii_4_ss_16);
+%a("Example 186:Comparing Values for Variable There is no one I can share my private worries with", q9q, tii_4_ss_17);
+%a("Example 187:Comparing Values for Variable If I were sick, I could easily find someone to help me with my daily chores", q9r, tii_4_ss_18);
+%a("Example 188:Comparing Values for Variable There is someone I can turn to for advice about handling problems with my family", q9s, tii_4_ss_19); 
+%a("Example 189:Comparing Values for Variable I am as good at doing things as most other people are", q9t, tii_4_ss_20);
+%a("Example 190:Comparing Values for Variable What are you most looking forward to in the coming year with your TIDES child", q10, tii_4_end);
+%a("Example 191:Comparing Values for Variable Anything else about TIDES child", q11, tii_4_end_2);
 
-/**Pre-Visit Questionnaire**/
 
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 179: Comparing Values for Variable';
-ID study_id;
-VAR q9h;
-WITH tii_4_ss_8;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 180: Comparing Values for Variable';
-ID study_id;
-VAR q9i;
-WITH tii_4_ss_9;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 181: Comparing Values for Variable';
-ID study_id;
-VAR q9j;
-WITH tii_4_ss_10;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 182: Comparing Values for Variable';
-ID study_id;
-VAR q9k;
-WITH tii_4_ss_11;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 183: Comparing Values for Variable';
-ID study_id;
-VAR q9l;
-WITH tii_4_ss_12;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 184: Comparing Values for Variable';
-ID study_id;
-VAR q9m;
-WITH tii_4_ss_13;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 185: Comparing Values for Variable';
-ID study_id;
-VAR q9n;
-WITH tii_4_ss_14;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 186: Comparing Values for Variable';
-ID study_id;
-VAR q9o;
-WITH tii_4_ss_15;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 187: Comparing Values for Variable';
-ID study_id;
-VAR q9p;
-WITH tii_4_ss_16;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 188: Comparing Values for Variable';
-ID study_id;
-VAR q9q;
-WITH tii_4_ss_17;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 189: Comparing Values for Variable';
-ID study_id;
-VAR q9r;
-WITH tii_4_ss_18;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 190: Comparing Values for Variable';
-ID study_id;
-VAR q9s;
-WITH tii_4_ss_19;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 191: Comparing Values for Variable';
-ID study_id;
-VAR q9t;
-WITH tii_4_ss_20;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 192: Comparing Values for Variable';
-ID study_id;
-VAR q10;
-WITH tii_4_end;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 193: Comparing Values for Variable';
-ID study_id;
-VAR q11;
-WITH tii_4_end_2;
-run;
