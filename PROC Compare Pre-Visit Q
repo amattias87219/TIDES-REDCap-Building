@@ -76,51 +76,14 @@ run;
 %a("Example 52:Comparing Values for Variable Medication Prescribed for Medical Problem 1", qc6y1b, tii_4_pmh_1b);
 %a("Example 53:Comparing Values for Variable Name of Medical Problem 2", qc6y2a, tii_4_pmh_2a);
 %a("Example 54:Comparing Values for Variable Medication Prescribed for Medical Problem 2", qc6y2b, tii_4_pmh_2b);
+%a("Example 55:Comparing Values for Variable Name of Medical Problem 3", qc6y3a, tii_4_pmh_3a);
+%a("Example 56:Comparing Values for Variable Medication Prescribed for Medical Problem 3", qc6y3b, tii_4_pmh_3b);
+%a("Example 57:Comparing Values for Variable Name of Medical Problem 4", qc6y4a, tii_4_pmh_4a);
+%a("Example 58:Comparing Values for Variable Medication Prescribed for Medical Problem 4", qc6y4b, tii_4_pmh_4b);
+%a("Example 59:Comparing Values for Variable Name of Medical Problem 4", qc6y5a, tii_4_pmh_5a);
+%a("Example 60:Comparing Values for Variable Medication Prescribed for Medical Problem 4", qc6y5b, tii_4_pmh_5b);
 
 /**Pre-Visit Questionnaire**/
-
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 55: Comparing Values for Variable';
-ID study_id;
-VAR qc6y3a;
-WITH tii_4_pmh_3a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 56: Comparing Values for Variable';
-ID study_id;
-VAR qc6y3b;
-WITH tii_4_pmh_3b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 57: Comparing Values for Variable';
-ID study_id;
-VAR qc6y4a;
-WITH tii_4_pmh_4a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 58: Comparing Values for Variable';
-ID study_id;
-VAR qc6y4b;
-WITH tii_4_pmh_4b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 59: Comparing Values for Variable';
-ID study_id;
-VAR qc6y5a;
-WITH tii_4_pmh_5a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 60: Comparing Values for Variable';
-ID study_id;
-VAR qc6y5b;
-WITH tii_4_pmh_5b;
-run;
 
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 61: Comparing Values for Variable';
