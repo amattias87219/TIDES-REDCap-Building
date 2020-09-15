@@ -87,7 +87,7 @@ run;
 %a("Example 63:Comparing Values for Variable # of Wheezing attacks in last 12 months", qc7b, tii_4_isaac_3);
 %a("Example 64:Comparing Values for Variable # of sleep disturbance events due to wheezing", qc7c, tii_4_isaac_4);
 %a("Example 65:Comparing Values for Variable Speech limitation due to wheezing", qc7d, tii_4_isaac_5);
-%a("Example 66:Comparing Values for Variable Asthma, Y/N", qc8, tii_4_isaac_6);
+%a("Example 66:Comparing Values for Variable Child Asthma, Y/N", qc8, tii_4_isaac_6);
 %a("Example 67:Comparing Values for Variable Mother Asthma, Y/N", qc9, tii_4_isaac_7);
 %a("Example 68:Comparing Values for Variable Bio father Asthma, Y/N", qc10, tii_4_isaac_8);
 %a("Example 69:Comparing Values for Variable Wheezing during/after exercise", qc11, tii_4_isaac_9);
@@ -98,228 +98,44 @@ run;
 %a("Example 74:Comparing Values for Variable Age during first appearance of itchy rash", qc13c, tii_4_isaac_14);
 %a("Example 75:Comparing Values for Variable Rash clear completely anytime in last 12 months", qc13d, tii_4_isaac_15);
 %a("Example 76:Comparing Values for Variable Kept awake because of rash", qc13e, tii_4_isaac_16);
-%a("Example 77:Comparing Values for Variable Kept awake because of rash", qc13e, tii_4_isaac_16);
+%a("Example 77:Comparing Values for Variable Child eczema, Y/N", qc14, tii_4_isaac_17);
+%a("Example 78:Comparing Values for Variable Per week physical activity leading to heavy breathing", qc15, tii_4_isaac_18);
+%a("Example 79:Comparing Values for Variable # of hours of TV/day", qc16, tii_4_isaac_19);
+%a("Example 80:Comparing Values for Variable Pet dog or cat in last 12 months", qc17, tii_4_isaac_20);
+%a("Example 81:Comparing Values for Variable # of hours/day child napped in last 1 month", qs1a, tii_4_sleep_1a);
+%a("Example 82:Comparing Values for Variable and/or", qs1b, tii_4_sleep_1b);
+%a("Example 83:Comparing Values for Variable # of naps/week", qs2, tii_4_sleep_2);
+%a("Example 84:Comparing Values for Variable # of hours slept/night", qs3, tii_4_sleep_3);
+%a("Example 85:Comparing Values for Variable How often child sleep at same bedtime", qs4a, tii_4_sleep_4a);
+%a("Example 86:Comparing Values for Variable How often fall asleep within 20 min", qs4b, tii_4_sleep_4b);
+%a("Example 87:Comparing Values for Variable How often wake up during the night", qs4c, tii_4_sleep_4c);
+%a("Example 88:Comparing Values for Variable How often wake up more than once during the night", qs4d, tii_4_sleep_4d);
+%a("Example 89:Comparing Values for Variable How long to become alert after waking", qs4e, tii_4_sleep_4e);
+%a("Example 90:Comparing Values for Variable How often seem tired during day", qs4f, tii_4_sleep_4f);
+%a("Example 91:Comparing Values for Variable Jewelry", p1a, tii_4_psai_1a);
+%a("Example 92:Comparing Values for Variable Guns", p1b, tii_4_psai_1b);
+%a("Example 93:Comparing Values for Variable Tool set", p1c, tii_4_psai_1c);
+%a("Example 94:Comparing Values for Variable Dolls", p1d, tii_4_psai_1d);
+%a("Example 95:Comparing Values for Variable Trains, cars, planes", p1e, tii_4_psai_1e);
+%a("Example 96:Comparing Values for Variable Swords", p1f, tii_4_psai_1f);
+%a("Example 97:Comparing Values for Variable Tea set", p1g, tii_4_psai_1g);
+%a("Example 98:Comparing Values for Variable Playing house", p2a, tii_4_psai_2a);
+%a("Example 99:Comparing Values for Variable Playing house", p2b, tii_4_psai_2b);
+%a("Example 100:Comparing Values for Variable Pretending to be female character", p2c, tii_4_psai_2c);
+%a("Example 101:Comparing Values for Variable Playing at having a male occupation", p2d, tii_4_psai_2d);
+%a("Example 102:Comparing Values for Variable Fighting", p2e, tii_4_psai_2e);
+%a("Example 103:Comparing Values for Variable Pretending to be family character", p2f, tii_4_psai_2f);
+%a("Example 104:Comparing Values for Variable Sports and balls games", p2g, tii_4_psai_2g);
+%a("Example 105:Comparing Values for Variable Climbing", p2h, tii_4_psai_2h);
+%a("Example 106:Comparing Values for Variable Playing at taking care of babies", p2i, tii_4_psai_2i);
+%a("Example 107:Comparing Values for Variable Show interest in real cars, trains, etc", p2j, tii_4_psai_2j);
+
+
 
 
 /**Pre-Visit Questionnaire**/
 
 
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 77: Comparing Values for Variable';
-ID study_id;
-VAR qc14;
-WITH tii_4_isaac_17;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 78: Comparing Values for Variable';
-ID study_id;
-VAR qc15;
-WITH tii_4_isaac_18;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 79: Comparing Values for Variable';
-ID study_id;
-VAR qc16;
-WITH tii_4_isaac_19;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 80: Comparing Values for Variable';
-ID study_id;
-VAR qc17;
-WITH tii_4_isaac_20;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 81: Comparing Values for Variable';
-ID study_id;
-VAR qs1a;
-WITH tii_4_sleep_1a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 82: Comparing Values for Variable';
-ID study_id;
-VAR qs1b;
-WITH tii_4_sleep_1b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 83: Comparing Values for Variable';
-ID study_id;
-VAR qs2;
-WITH tii_4_sleep_2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 84: Comparing Values for Variable';
-ID study_id;
-VAR qs3;
-WITH tii_4_sleep_3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 85: Comparing Values for Variable';
-ID study_id;
-VAR qs4a;
-WITH tii_4_sleep_4a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 86: Comparing Values for Variable';
-ID study_id;
-VAR qs4b;
-WITH tii_4_sleep_4b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 87: Comparing Values for Variable';
-ID study_id;
-VAR qs4c;
-WITH tii_4_sleep_4c;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 88: Comparing Values for Variable';
-ID study_id;
-VAR qs4d;
-WITH tii_4_sleep_4d;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 89: Comparing Values for Variable';
-ID study_id;
-VAR qs4e;
-WITH tii_4_sleep_4e;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 90: Comparing Values for Variable';
-ID study_id;
-VAR qs4f;
-WITH tii_4_sleep_4f;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 91: Comparing Values for Variable';
-ID study_id;
-VAR p1a;
-WITH tii_4_psai_1a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 92: Comparing Values for Variable';
-ID study_id;
-VAR p1b;
-WITH tii_4_psai_1b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 93: Comparing Values for Variable';
-ID study_id;
-VAR p1c;
-WITH tii_4_psai_1c;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 94: Comparing Values for Variable';
-ID study_id;
-VAR p1d;
-WITH tii_4_psai_1d;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 95: Comparing Values for Variable';
-ID study_id;
-VAR p1e;
-WITH tii_4_psai_1e;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 96: Comparing Values for Variable';
-ID study_id;
-VAR p1f;
-WITH tii_4_psai_1f;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 97: Comparing Values for Variable';
-ID study_id;
-VAR p1g;
-WITH tii_4_psai_1g;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 98: Comparing Values for Variable';
-ID study_id;
-VAR p2a;
-WITH tii_4_psai_2a;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 99: Comparing Values for Variable';
-ID study_id;
-VAR p2b;
-WITH tii_4_psai_2b;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 100: Comparing Values for Variable';
-ID study_id;
-VAR p2c;
-WITH tii_4_psai_2c;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 101: Comparing Values for Variable';
-ID study_id;
-VAR p2d;
-WITH tii_4_psai_2d;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 102: Comparing Values for Variable';
-ID study_id;
-VAR p2e;
-WITH tii_4_psai_2e;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 103: Comparing Values for Variable';
-ID study_id;
-VAR p2f;
-WITH tii_4_psai_2f;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 104: Comparing Values for Variable';
-ID study_id;
-VAR p2g;
-WITH tii_4_psai_2g;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 105: Comparing Values for Variable';
-ID study_id;
-VAR p2h;
-WITH tii_4_psai_2h;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 106: Comparing Values for Variable';
-ID study_id;
-VAR p2i;
-WITH tii_4_psai_2i;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 107: Comparing Values for Variable';
-ID study_id;
-VAR p2j;
-WITH tii_4_psai_2j;
-run;
 
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 108: Comparing Values for Variable';
