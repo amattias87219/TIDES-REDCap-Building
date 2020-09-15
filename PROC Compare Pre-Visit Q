@@ -153,165 +153,57 @@ run;
 %a("Example 127:Comparing Values for Variable Friend/family serious accident/illness", q6d, tii_4_sle_4);
 %a("Example 128:Comparing Values for Variable Trouble with the law", q6e, tii_4_sle_5);
 %a("Example 129:Comparing Values for Variable Partner trouble with the law", q6f, tii_4_sle_6);
-%a("Example 130:Comparing Values for Variable Mother separated/divorced", q6g, tii_4_sle_7;
-%a("Example 131:Comparing Values for Variable Partner lost job", q6h, tii_4_sle_8;
-%a("Example 132:Comparing Values for Variable Mother significant drop in income", q6i, tii_4_sle_9;
-%a("Example 133:Comparing Values for Variable Mother major financial problem", q6j, tii_4_sle_10;
-%a("Example 134:Comparing Values for Variable Mother car/house burglarized", q6k, tii_4_sle_11;
-%a("Example 135:Comparing Values for Variable Mother homeless", q6l, tii_4_sle_12;
-%a("Example 136:Comparing Values for Variable Partner did not want child", q6m, tii_4_sle_13;
-%a("Example 137:Comparing Values for Variable Serious argument with partner", q6n, tii_4_sle_14;
-%a("Example 138:Comparing Values for Variable Serious argument with family/friends", q6o, tii_4_sle_15;
-%a("Example 139:Comparing Values for Variable Partner physically cruel", q6p, tii_4_sle_16;
-%a("Example 140:Comparing Values for Variable Partner emotionally cruel", q6q, tii_4_sle_17;
-%a("Example 141:Comparing Values for Variable Mother physically cruel to partner", q6r, tii_4_sle_18;
-%a("Example 142:Comparing Values for Variable Mother attempted suicide", q6s, tii_4_sle_19;
-%a("Example 143:Comparing Values for Variable Friend/relative attempted suicide", q6t, tii_4_sle_20;
-%a("Example 144:Comparing Values for Variable Mother suffer mental illness", q6u, tii_4_sle_21;
-%a("Example 145:Comparing Values for Variable Friend/relative suffer mental illness", q6v, tii_4_sle_22;
-%a("Example 146:Comparing Values for Variable Partner died", q6w, tii_4_sle_23;
-%a("Example 147:Comparing Values for Variable Friend/relative died", q6x, tii_4_sle_24;
-%a("Example 148:Comparing Values for Variable Mother extramartital sexual affair", q6y, tii_4_sle_25;
-%a("Example 149:Comparing Values for Variable Partner extramartital sexual affair", q6z, tii_4_sle_26;
-%a("Example 150:Comparing Values for Variable Other", q6oth, tii_4_sle_other;
-%a("Example 151:Comparing Values for Variable How often mother upset due to unexpected event", q7a, tii_4_cps_1;
-%a("Example 152:Comparing Values for Variable How often felt unable to control important things", q7b, tii_4_cps_2;
-%a("Example 153:Comparing Values for Variable How often nervous or stressed", q7c, tii_4_cps_3;
-%a("Example 154:Comparing Values for Variable How often confident about ability to handle personal prob", q7d, tii_4_cps_4;
-%a("Example 155:Comparing Values for Variable How often feel things go your way", q7e, tii_4_cps_5;
-%a("Example 156:Comparing Values for Variable How often could not cope with all tasks", q7f, tii_4_cps_6;
-%a("Example 157:Comparing Values for Variable How often control irritations", q7g, tii_4_cps_7;
-%a("Example 158:Comparing Values for Variable How often feel on top of things", q7h, tii_4_cps_8;
+%a("Example 130:Comparing Values for Variable Mother separated/divorced", q6g, tii_4_sle_7);
+%a("Example 131:Comparing Values for Variable Partner lost job", q6h, tii_4_sle_8);
+%a("Example 132:Comparing Values for Variable Mother significant drop in income", q6i, tii_4_sle_9);
+%a("Example 133:Comparing Values for Variable Mother major financial problem", q6j, tii_4_sle_10);
+%a("Example 134:Comparing Values for Variable Mother car/house burglarized", q6k, tii_4_sle_11);
+%a("Example 135:Comparing Values for Variable Mother homeless", q6l, tii_4_sle_12);
+%a("Example 136:Comparing Values for Variable Partner did not want child", q6m, tii_4_sle_13);
+%a("Example 137:Comparing Values for Variable Serious argument with partner", q6n, tii_4_sle_14);
+%a("Example 138:Comparing Values for Variable Serious argument with family/friends", q6o, tii_4_sle_15);
+%a("Example 139:Comparing Values for Variable Partner physically cruel", q6p, tii_4_sle_16);
+%a("Example 140:Comparing Values for Variable Partner emotionally cruel", q6q, tii_4_sle_17);
+%a("Example 141:Comparing Values for Variable Mother physically cruel to partner", q6r, tii_4_sle_18);
+%a("Example 142:Comparing Values for Variable Mother attempted suicide", q6s, tii_4_sle_19);
+%a("Example 143:Comparing Values for Variable Friend/relative attempted suicide", q6t, tii_4_sle_20);
+%a("Example 144:Comparing Values for Variable Mother suffer mental illness", q6u, tii_4_sle_21);
+%a("Example 145:Comparing Values for Variable Friend/relative suffer mental illness", q6v, tii_4_sle_22);
+%a("Example 146:Comparing Values for Variable Partner died", q6w, tii_4_sle_23);
+%a("Example 147:Comparing Values for Variable Friend/relative died", q6x, tii_4_sle_24);
+%a("Example 148:Comparing Values for Variable Mother extramartital sexual affair", q6y, tii_4_sle_25);
+%a("Example 149:Comparing Values for Variable Partner extramartital sexual affair", q6z, tii_4_sle_26);
+%a("Example 150:Comparing Values for Variable Other", q6oth, tii_4_sle_other);
+%a("Example 151:Comparing Values for Variable How often mother upset due to unexpected event", q7a, tii_4_cps_1);
+%a("Example 152:Comparing Values for Variable How often felt unable to control important things", q7b, tii_4_cps_2);
+%a("Example 153:Comparing Values for Variable How often nervous or stressed", q7c, tii_4_cps_3);
+%a("Example 154:Comparing Values for Variable How often confident about ability to handle personal prob", q7d, tii_4_cps_4);
+%a("Example 155:Comparing Values for Variable How often feel things go your way", q7e, tii_4_cps_5);
+%a("Example 156:Comparing Values for Variable How often could not cope with all tasks", q7f, tii_4_cps_6);
+%a("Example 157:Comparing Values for Variable How often control irritations", q7g, tii_4_cps_7);
+%a("Example 158:Comparing Values for Variable How often feel on top of things", q7h, tii_4_cps_8);
+%a("Example 159:Comparing Values for Variable How often feel angry", q7i, tii_4_cps_9);
+%a("Example 160:Comparing Values for Variable How often feel difficulties pile up", q7j, tii_4_cps_10);
+%a("Example 161:Comparing Values for Variable Little interest or pleasure in doing things", q8a, tii_4_phq9_1);
+%a("Example 162:Comparing Values for Variable Feeling down, depressed, or hopeless", q8b, tii_4_phq9_2);
+%a("Example 163:Comparing Values for Variable Trouble falling or staying asleep or sleeping too much", q8c, tii_4_phq9_3);
+%a("Example 164:Comparing Values for Variable Feeling tired or have little energy", q8d, tii_4_phq9_4);
+%a("Example 165:Comparing Values for Variable Feeling bas about yourself", q8e, tii_4_phq9_5);
+%a("Example 166:Comparing Values for Variable Poor appetite or overeating", q8f, tii_4_phq9_6);
+%a("Example 167:Comparing Values for Variable Trouble concentrating", q8g, tii_4_phq9_7);
+%a("Example 168:Comparing Values for Variable Trouble concentrating", q8h, tii_4_phq9_8);
+%a("Example 169:Comparing Values for Variable Thoughts you would be better dead", q8i, tii_4_phq9_9);
+%a("Example 170:Comparing Values for Variable There are several people I trust", q9a, tii_4_ss_1);
+%a("Example 171:Comparing Values for Variable Have someone who can help me fix appliance or repair car", q9b, tii_4_ss_2);
+%a("Example 172:Comparing Values for Variable Most of my friends are more interesting than I am", q9c, tii_4_ss_3);
+%a("Example 173:Comparing Values for Variable There is someone who takes pride in my accomplishments", q9d, tii_4_ss_4);
+%a("Example 174:Comparing Values for Variable If I feel lonely, there are people I can talk to", q9e, tii_4_ss_5);
+%a("Example 175:Comparing Values for Variable There is no one I feel comfortable to talking about intimate personal prob", q9f, tii_4_ss_6);
+%a("Example 176:Comparing Values for Variable I often meet or talk with family/friends", q9g, tii_4_ss_7);
+%a("Example 177:Comparing Values for Variable I often meet or talk with family/friends", q9g, tii_4_ss_7);
 
 /**Pre-Visit Questionnaire**/
 
-
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 161: Comparing Values for Variable';
-ID study_id;
-VAR q7i;
-WITH tii_4_cps_9;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 162: Comparing Values for Variable';
-ID study_id;
-VAR q7j;
-WITH tii_4_cps_10;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 163: Comparing Values for Variable';
-ID study_id;
-VAR q8a;
-WITH tii_4_phq9_1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 164: Comparing Values for Variable';
-ID study_id;
-VAR q8b;
-WITH tii_4_phq9_2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 165: Comparing Values for Variable';
-ID study_id;
-VAR q8c;
-WITH tii_4_phq9_3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 166: Comparing Values for Variable';
-ID study_id;
-VAR q8d;
-WITH tii_4_phq9_4;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 167: Comparing Values for Variable';
-ID study_id;
-VAR q8e;
-WITH tii_4_phq9_5;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 168: Comparing Values for Variable';
-ID study_id;
-VAR q8f;
-WITH tii_4_phq9_6;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 169: Comparing Values for Variable';
-ID study_id;
-VAR q8g;
-WITH tii_4_phq9_7;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 170: Comparing Values for Variable';
-ID study_id;
-VAR q8h;
-WITH tii_4_phq9_8;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 171: Comparing Values for Variable';
-ID study_id;
-VAR q8i;
-WITH tii_4_phq9_9;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 172: Comparing Values for Variable';
-ID study_id;
-VAR q9a;
-WITH tii_4_ss_1;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 173: Comparing Values for Variable';
-ID study_id;
-VAR q9b;
-WITH tii_4_ss_2;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 174: Comparing Values for Variable';
-ID study_id;
-VAR q9c;
-WITH tii_4_ss_3;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 175: Comparing Values for Variable';
-ID study_id;
-VAR q9d;
-WITH tii_4_ss_4;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 176: Comparing Values for Variable';
-ID study_id;
-VAR q9e;
-WITH tii_4_ss_5;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 177: Comparing Values for Variable';
-ID study_id;
-VAR q9f;
-WITH tii_4_ss_6;
-run;
-
-proc compare BASE=mother_q COMPARE=master_q;
-TITLE 'Example 178: Comparing Values for Variable';
-ID study_id;
-VAR q9g;
-WITH tii_4_ss_7;
-run;
 
 proc compare BASE=mother_q COMPARE=master_q;
 TITLE 'Example 179: Comparing Values for Variable';
